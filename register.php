@@ -99,7 +99,7 @@ if(isset($_POST['register']))
             <li><a href="Blogs.html">Blogs</a></li>
             <li><a href="Contact%20Us.html">Contact Us</a></li>
             <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>
-			  <li class="active"><a  href="login.html"><i class="fa fa-user fa-2x"></i> Log in</a></li>
+			  <li class="active"><a  href="login.php"><i class="fa fa-user fa-2x"></i> Log in</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
