@@ -27,16 +27,8 @@ if(isset($_POST['login']))
         <script>alert('wrong details');</script>
         <?php
 	}
-	
-	if(!isset($_SESSION['user']))
-{
-	header("Location: index.php");
 }
-$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
-$userRow=mysql_fetch_array($res);
-?>
 	
-}
 ?>
 
 
@@ -263,4 +255,4 @@ Some lines <a href="#"><span class="blog">Links</span></a> some lines<br><span c
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
   </body>
-</html>
+  </html>
