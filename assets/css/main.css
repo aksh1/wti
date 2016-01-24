@@ -527,7 +527,7 @@ button.btn {
     margin: 0;
     padding: 0 20px;
     vertical-align: middle;
-    background: #19b9e7;
+    background: #1abc9c;
     border: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -544,9 +544,9 @@ button.btn:hover { opacity: 0.6; color: #fff; }
 
 button.btn:active { outline: 0; opacity: 0.6; color: #fff; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
 
-button.btn:focus { outline: 0; opacity: 0.6; background: #19b9e7; color: #fff; }
+button.btn:focus { outline: 0; opacity: 0.6; background: #1abc9c; color: #fff; }
 
-button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; background: #19b9e7; color: #fff; }
+button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; background: #1abc9c; color: #fff; }
 
 
 
@@ -598,5 +598,42 @@ button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; bac
 }
 
 .form-bottom form .input-error {
-	border-color: #19b9e7;
+	border-color: #1abc9c;
+}
+
+
+.butn a {
+	position: relative;
+    color: ;
+    text-decoration: none;
+    background-color: #1abc9c;
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 700;
+    font-size: 1em;
+    display: block;
+    padding: 4px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 9px 0px #00e5e6, 0px 9px 25px rgba(0,0,0,.7);
+    -moz-box-shadow: 0px 9px 0px #00e5e6, 0px 9px 25px rgba(0,0,0,.7);
+    box-shadow: 0px 9px 0px #00e5e6, 0px 9px 25px rgba(0,0,0,.7);
+    margin: 50px auto;
+	width: 350px;
+	text-align: center;
+	
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
+
+.butn a:active {
+    -webkit-box-shadow: 0px 3px 0px #00e5e6, 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px #00e5e6, 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px #00e5e6, 0px 3px 6px rgba(0,0,0,.9);
+    position: relative;
+    top: 6px;
+}
 }

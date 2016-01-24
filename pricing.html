@@ -1,52 +1,3 @@
-
-
-<?php
-session_start();
-include_once 'dbconnect.php';
-
-if(isset($_SESSION['user'])!="")
-{
-	header("Location: index.html");
-}
-
-if(isset($_POST['login']))
-{
-	$email = mysql_real_escape_string($_POST['email']);
-	$upass = mysql_real_escape_string($_POST['password']);
-	$res=mysql_query("SELECT * FROM users WHERE email='$email'");
-	$row=mysql_fetch_array($res);
-	
-	if($row['password']==md5($upass))
-	{
-		$_SESSION['user'] = $row['user_id'];
-		header("Location: index.html");
-	}
-	else
-	{
-		?>
-        <script>alert('wrong details');</script>
-        <?php
-	}
-	
-	if(!isset($_SESSION['user']))
-{
-	header("Location: index.php");
-}
-$res=mysql_query("SELECT * FROM users WHERE user_id=".$_SESSION['user']);
-$userRow=mysql_fetch_array($res);
-?>
-	
-}
-?>
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -57,7 +8,7 @@ $userRow=mysql_fetch_array($res);
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-    <title>Login - Write To Information</title>
+    <title>Pricing - Write To Information</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -65,8 +16,6 @@ $userRow=mysql_fetch_array($res);
 
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
-
-	<script src="assets/js/Chart.js"></script>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -91,12 +40,20 @@ $userRow=mysql_fetch_array($res);
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Home</a></li>
-            <li ><a href="News%20portal.html">News Portal</a></li>
-            <li><a href="Blogs.html">Blogs</a></li>
-            <li><a href="Contact%20Us.html">Contact Us</a></li>
+            <li ><a href="index.html">Home</a></li>
+            <li ><a href="FAQs.html">FAQs</a></li>
+        	<li><a href="Blogs.html">Blogs</a></li>
+            <li ><a href="howwework.html">How we work</a></li>
+            <li ><a href="rticases.html">RTI Cases</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li class="active"><a href="pricing.html">Pricing</a></li>
+            <li><a href="filerti.html">File RTI</a></li>
+             
             <li><a data-toggle="modal" data-target="#myModal" href="#myModal"><i class="fa fa-envelope-o"></i></a></li>
-			  <li class="active"><a  href="login.php"><i class="fa fa-user fa-2x"></i> Log in</a></li>
+            
+			
+            
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -106,60 +63,39 @@ $userRow=mysql_fetch_array($res);
 		<div class="container">
 			<div class="row centered">
 				<div class="col-lg-8 col-lg-offset-2">
-				
+				<h4>Pricing</h4>
+					
 				</div>
 			</div><!-- row -->
 		</div><!-- container -->
 	</div><!--  bluewrap -->
 
 
-	<div class="container w">
-		
-		<div class="col-sm-2"></div>
+	<div class="container desc">
+		<div class="row">
+			<br><br>
+			<div class="col-lg-2 centered">
 				
-                    	<div class="col-sm-8">
-                    		<div class="form-top">
-                        		<div class="form-top-left">
-                        			<h3>Login</h3>
-                            		<p>Login with your registered email id and password</p>
-                        		</div>
-                        		<div class="form-top-right">
-                        			<i class="fa fa-pencil"></i>
-                        		</div>
-                            </div>
-                            
-                            <div class="form-bottom">
-			                    <form role="form" action="index.html" method="post" class="registration-form">
-			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">Email id</label>
-			                        	<input type="text" name="email" placeholder="username" class="form-first-name form-control" id="form-first-name">
-			                        </div>
-			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-Password">Password</label>
-			                        	<input type="password" name="password" placeholder="password" class="form-last-name form-control" id="form-last-name">
-			                        </div>
-			                        
-			                        <button type="submit" name="login" class="btn">LOGIN</button>
-									<p>Not Registered yet <a href="register.php">Click here</a></p>
-			                    </form>
-		                    </div>
-                    	</div>
+			</div><!-- col-lg-6 -->
+			<div class="col-lg-8">
+				<h3>We will Upload Soon...</h3>
+				
+			</div>
+			<div class="col-lg-2 ">
+				
+			</div>
+		</div><!-- row -->
 		
-		<div class="col-sm-2"></div>
-	</div><!-- container --><br>
-
-
-
-
+		
+		
+	</div><!-- container -->
 
 	
 	<div id="r">
 		<div class="container">
 			<div class="row centered">
 				<div class="col-lg-8 col-lg-offset-2">
-					<h4>Write To Information (WTI)</h4>
-					<p>Write To Information (WTI), is a pan – Indian, volunteer organization run by a team believing in parity in all fields possible and aims to promote transparency and bridge the gap between the citizen and the Government of India.
-Our vision is to build an easier path for the Indian citizenry by filing RTI’s online and generating awareness among them about their Right To Know.</p>
+					
 				</div>
 			</div><!-- row -->
 		</div><!-- container -->
@@ -211,11 +147,7 @@ Some lines <a href="#"><span class="blog">Links</span></a> some lines<br><span c
 				     </div>
 			    </div>
 				<div class="col-sm-4">
-					<h3><a href="#">How We Work</a></h3>
-					<h3><a href="#">Team</a></h3>
-					<h3><a href="#">Pricing</a></h3>
-					<h3><a href="#">Track</a></h3>
-					<h3><a href="#">RTI Cases</a></h3>
+					
 					
 				</div>
 				</div>
