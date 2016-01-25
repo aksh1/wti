@@ -27,7 +27,7 @@ body {
 }
 
 /* Titles */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4,  {
     font-family: "Raleway";
     font-weight: 300;
     color: #333;
@@ -636,4 +636,8 @@ button.btn:active:focus, button.btn.active:focus { outline: 0; opacity: 0.6; bac
     position: relative;
     top: 6px;
 }
+}
+
+h5 {
+color: white;
 }
